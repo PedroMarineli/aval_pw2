@@ -8,19 +8,14 @@ import org.springframework.ui.Model;
 public class HomeController {
     @RequestMapping("/")
     public String index(Model model) {
-        model.addAttribute("mensagem", "Resultado");
+        int[] resultado = new int[50];
+        for(int pos = 1;pos <= 30;pos++) {
+            resultado[pos] = pos + 1;
+        }
+        model.addAttribute("tabuada", resultado);
         return "/home/index";
     }
 
-    @RequestMapping("/tabuada")
-    public String tabuada(Model abacaxi) {
-        int[] resultado = new int[10];
-        for(int pos = 0;pos <10;pos++) {
-            resultado[pos] = 5 * (pos + 1);
-        }
-        abacaxi.addAttribute("tabuada", resultado);
-        return "/home/tabuada";
-    }
 }
 
 

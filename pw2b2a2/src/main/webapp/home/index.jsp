@@ -8,10 +8,12 @@
         <title>Exemplo</title>
     </head>
     <body>
-        <h1>${mensagem}</h1>
+        <h1>Resultado</h1>
+        <h2>Pedro Henrique Marineli de Oliveira</h2>
         <ul>
-            <c:forEach var="valor" items="${resultado}">
+            <c:forEach var="valor" items="${tabuada}">
                 <li>${valor}</li>
             </c:forEach>
+            </ul>
     </body>
 </html>
